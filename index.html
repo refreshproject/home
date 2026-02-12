@@ -13,36 +13,94 @@
 
   <main class="container">
 
-    <!-- Header -->
-    <header class="profile">
-      <img src="images/logo.png" alt="The Refresh Project Logo" class="logo">
-      <h1>The Refresh Project</h1>
-      <p class="tagline">"Making hygiene accessible to all"</p>
-    </header>
+    <!-- GoFundMe Card -->
+    <a href="https://gofundme.com" target="_blank" class="link-card gofundme">
+      <img src="images/v1_573.png" class="icon" alt="GoFundMe">
+      <div>
+        <strong>Support us on GoFundMe 🎯</strong>
+        <p>$765 / $1000 raised!</p>
+      </div>
+    </a>
 
-    <!-- Links -->
-    <section class="links">
+    <!-- YouTube Video Card -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <!-- Replace VIDEO_ID with your real YouTube ID -->
+        <iframe 
+          src="https://www.youtube.com/embed/VIDEO_ID" 
+          title="YouTube video"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">Watch this video to learn more! 💡</p>
+    </div>
 
-      <a href="#" class="card">
-        🎯 Support us on GoFundMe  
-        <span>$765 / $1000 raised</span>
-      </a>
+    <!-- FAQ Section -->
+    <section class="faq-card">
+      <h2>Frequently asked questions ⁉️</h2>
 
-      <a href="#" class="card">
-        💡 Watch our YouTube video
-      </a>
+      <div class="faq-item">
+        <button class="faq-question">What is The Refresh Project?</button>
+        <div class="faq-answer">
+          <p>The Refresh Project is dedicated to making basic hygiene accessible to all by organizing drives and distributing essential products to those in need.</p>
+        </div>
+      </div>
 
-      <a href="#" class="card">
-        ⁉️ Frequently Asked Questions
-      </a>
+      <div class="faq-item">
+        <button class="faq-question">How will the GoFundMe donations be used?</button>
+        <div class="faq-answer">
+          <p>All donations go directly toward purchasing hygiene products and supporting our distribution efforts.</p>
+        </div>
+      </div>
 
-      <a href="#" class="card">
-        👋 Meet the Team Behind The Refresh Project
-      </a>
+      <div class="faq-item">
+        <button class="faq-question">Will there be an in-person donation drive?</button>
+        <div class="faq-answer">
+          <p>Yes! We will be hosting in-person donation drives. Stay tuned for details.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is there any way I can help?</button>
+        <div class="faq-answer">
+          <p>You can donate, share our page, volunteer, or help us spread awareness.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Who are you guys?</button>
+        <div class="faq-answer">
+          <p>We are a team passionate about improving access to hygiene products in our community.</p>
+        </div>
+      </div>
 
     </section>
 
+    <!-- Meet The Team -->
+    <a href="#" class="link-card team">
+      <img src="images/v1_691.png" class="team-img" alt="Team">
+      <span>Meet the team behind The Refresh Project! 👋🏼</span>
+    </a>
+
   </main>
+
+  <script>
+    // FAQ Accordion
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(question => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        question.classList.toggle("active");
+
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
